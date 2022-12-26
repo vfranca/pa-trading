@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "pa-tk"
-version = "0.1.0"
-description = "price action - tool kit de comandos"
+name = "pa-trading"
+version = "0.2.0"
+description = "Comandos para cálculos price action - tool kit de comandos"
 authors = ["Valmir Franca <vfranca3@gmail.com>"]
 readme = "README.md"
-packages = [{include = "pa_tk"}]
+packages = [{include = "pa_trading"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -16,4 +16,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-pa = "pa_tk.pa:cli"
+pa = "pa_trading.pa:cli"

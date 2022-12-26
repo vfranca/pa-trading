@@ -3,7 +3,7 @@ grupo de comandos pa - price action
 comando pb - pullbacks
 """
 import click
-from pa_tk._pb import pullback
+from pa_trading._pb import pullback
 
 
 

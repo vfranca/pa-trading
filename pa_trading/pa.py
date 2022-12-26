@@ -8,10 +8,10 @@ import click
 
 
 # Importa os comandos
-from pa_tk.l import l
-from pa_tk.pb import pb
-from pa_tk.tr import tr
-from pa_tk.p2 import p2
+from pa_trading.l import l
+from pa_trading.pb import pb
+from pa_trading.tr import tr
+from pa_trading.p2 import p2
 
 
 # Cria o grupo de comandos pa
