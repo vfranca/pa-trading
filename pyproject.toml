@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "pa-trading"
-version = "0.2.0"
-description = "Comandos para cálculos price action - tool kit de comandos"
+version = "0.2.1"
+description = "Comandos para cálculos de price action"
 authors = ["Valmir Franca <vfranca3@gmail.com>"]
 readme = "README.md"
+license = "BSD-3-Clause"
+repository = "https://github.com/vfranca/pa-trading"
+keywords = ["CLI", "trading"]
 packages = [{include = "pa_trading"}]
 
 [tool.poetry.dependencies]
