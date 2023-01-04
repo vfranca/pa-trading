@@ -1,6 +1,6 @@
-"""
-Arquivo de definições
-"""
+# pa-trading
+# Copyright 2022 Valmir França da Silva
+# http://github.com/vfranca
 
 
 def tamanho_perna(preco_final, preco_inicial):

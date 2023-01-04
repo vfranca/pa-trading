@@ -1,9 +1,6 @@
-"""
-scripts python
-Copyright 2022 Valmir França da Silva
-grupo de comandos pa
-comando p2 movimento projetado de perna 1 = perna 2
-"""
+# pa-trading
+# Copyright 2022 Valmir França da Silva
+# http://github.com/vfranca
 import click
 
 

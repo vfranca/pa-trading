@@ -19,7 +19,7 @@ from pa_trading.b import b
 def pa(version):
     """grupo de comandos pa (price action)."""
     if version: click.echo("pa-trading %s" % __version__)
-    else: click.echo("Digite pa --help para mais informações")
+    else: click.echo("Digite pa --help para ajuda")
 
 
 # Adiciona os comandos
