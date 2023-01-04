@@ -5,7 +5,6 @@ import click
 from pa_trading._pb import pullback
 
 
-
 # Cria o comando pb
 @click.command()
 @click.argument("preco_final", type=float)
