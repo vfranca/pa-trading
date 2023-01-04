@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pa-trading"
-version = "0.2.1"
+version = "0.3.0"
 description = "Comandos para cálculos de price action"
 authors = ["Valmir Franca <vfranca3@gmail.com>"]
 readme = "README.md"
@@ -19,4 +19,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-pa = "pa_trading.pa:cli"
+pa = "pa_trading.pa:pa"
