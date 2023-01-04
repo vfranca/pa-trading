@@ -1,7 +1,6 @@
-"""
-grupo de comandos pa - price action
-comando pb - pullbacks
-"""
+# pa-trading
+# Copyright 2022 Valmir França da Silva
+# http://github.com/vfranca
 import click
 from pa_trading._pb import pullback
 

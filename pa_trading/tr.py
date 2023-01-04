@@ -1,8 +1,6 @@
-"""
-Copyright 2021 Valmir França da Silva
-grupo de comandos pa
-comando tr - regiões de lateralidade
-"""
+# pa-trading
+# Copyright 2022 Valmir França da Silva
+# http://github.com/vfranca
 import click
 
 

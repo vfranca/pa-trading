@@ -2,6 +2,7 @@
 # Copyright 2022 Valmir França da Silva
 # http://github.com/vfranca
 import click
+from pa_trading import __version__
 
 
 # Importa os comandos
@@ -13,10 +14,12 @@ from pa_trading.b import b
 
 
 # Cria o grupo de comandos pa
-@click.group()
-def pa():
+@click.group(invoke_without_command=True)
+@click.option("--version", is_flag=True, help="Show the version and exit.")
+def pa(version):
     """grupo de comandos pa (price action)."""
-    pass
+    if version: click.echo("pa-trading %s" % __version__)
+    else: click.echo("Digite pa --help para mais informações")
 
 
 # Adiciona os comandos
