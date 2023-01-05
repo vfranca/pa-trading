@@ -10,7 +10,7 @@ run = CliRunner()
 
 def test_exibe_versao():
     res = run.invoke(pa, ["--version"])
-    assert res.output == "pa-trading 0.6.0\n"
+    assert res.output == "pa-trading 0.7.0\n"
 
 
 @mark.skip()

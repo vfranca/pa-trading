@@ -11,13 +11,14 @@ from pa_trading.pb import pb
 from pa_trading.tr import tr
 from pa_trading.p2 import p2
 from pa_trading.b import b
+from pa_trading.ro import ro
 
 
 # Cria o grupo de comandos pa
 @click.group(invoke_without_command=True)
 @click.option("--version", is_flag=True, help="Show the version and exit.")
 def pa(version):
-    """grupo de comandos pa (price action)."""
+    """Grupo de comandos para calculos de price action no day trade."""
     if version:
         click.echo("pa-trading %s" % __version__)
 
@@ -28,6 +29,7 @@ pa.add_command(pb)
 pa.add_command(tr)
 pa.add_command(p2)
 pa.add_command(b)
+pa.add_command(ro)
 
 
 if __name__ == "__main__":
