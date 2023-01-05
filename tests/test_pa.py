@@ -10,7 +10,7 @@ run = CliRunner()
 
 def test_exibe_versao():
     res = run.invoke(pa, ["--version"])
-    assert res.output == "pa-trading 0.5.0\n"
+    assert res.output == "pa-trading 0.6.0\n"
 
 
 @mark.skip()
@@ -41,6 +41,38 @@ def test_calcula_as_regioes_da_lateralidade():
     )
 
 
-def test_calcula_o_horario_de_fechamento_da_barra():
+def test_calcula_o_horario_de_fechamento_da_barra_de_3_minutos():
+    res = run.invoke(pa, ["b", "--period", "m3", "30"])
+    assert res.output == "10H30\n"
+
+
+def test_calcula_o_horario_de_fechamento_da_barra_de_5_minutos():
     res = run.invoke(pa, ["b", "18"])
     assert res.output == "10H30\n"
+
+
+def test_calcula_o_horario_de_fechamento_da_barra_de_10_minutos():
+    res = run.invoke(pa, ["b", "--period", "m10", "9"])
+    assert res.output == "10H30\n"
+
+
+def test_calcula_o_horario_de_fechamento_da_barra_de_15_minutos():
+    res = run.invoke(pa, ["b", "--period", "m15", "6"])
+    assert res.output == "10H30\n"
+    res = run.invoke(pa, ["b", "-p", "m15", "6"])
+    assert res.output == "10H30\n"
+
+
+def test_calcula_o_horario_de_fechamento_da_barra_de_20_minutos():
+    res = run.invoke(pa, ["b", "--period", "m20", "5"])
+    assert res.output == "10H40\n"
+
+
+def test_calcula_o_horario_de_fechamento_da_barra_de_30_minutos():
+    res = run.invoke(pa, ["b", "--period", "m30", "3"])
+    assert res.output == "10H30\n"
+
+
+def test_calcula_o_horario_de_fechamento_da_barra_de_60_minutos():
+    res = run.invoke(pa, ["b", "--period", "h1", "2"])
+    assert res.output == "11H0\n"
