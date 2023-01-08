@@ -2,6 +2,7 @@
 # Copyright 2021 Valmir França da Silva
 # http://github.com/vfranca
 import click
+from pa_trading.conf import formato_moeda
 
 
 # Cria o comando ro
@@ -19,9 +20,12 @@ def ro(max, min, range_medio):
     max_projetada = max + range_restante
     # Calcula a mínima estimada do dia
     min_projetada = min - range_restante
-    click.echo("%.2f range restante" % range_restante)
-    click.echo("%.2f max" % max_projetada)
-    click.echo("%.2f min" % min_projetada)
+    formato = formato_moeda + " = range restante"
+    click.echo(formato % range_restante)
+    formato = formato_moeda + " = máxima"
+    click.echo(formato % max_projetada)
+    formato = formato_moeda + " = mínima"
+    click.echo(formato % min_projetada)
 
 
 if __name__ == "__main__":
