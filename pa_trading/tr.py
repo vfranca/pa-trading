@@ -2,6 +2,7 @@
 # Copyright 2022 Valmir França da Silva
 # http://github.com/vfranca
 import click
+from pa_trading.conf import formato_moeda
 
 
 # Cria o comando tr
@@ -18,14 +19,14 @@ def tr(topo, fundo, digitos):
     terco_inf = fundo + terco
     mm_alta = topo + range
     mm_baixa = fundo - range
-    click.echo("%.2f" % range)
-    click.echo("%.2f" % mm_alta)
-    click.echo("%.2f" % topo)
-    click.echo("%.2f" % terco_sup)
-    click.echo("%.2f" % meio)
-    click.echo("%.2f" % terco_inf)
-    click.echo("%.2f" % fundo)
-    click.echo("%.2f" % mm_baixa)
+    click.echo(formato_moeda % range)
+    click.echo(formato_moeda % mm_alta)
+    click.echo(formato_moeda % topo)
+    click.echo(formato_moeda % terco_sup)
+    click.echo(formato_moeda % meio)
+    click.echo(formato_moeda % terco_inf)
+    click.echo(formato_moeda % fundo)
+    click.echo(formato_moeda % mm_baixa)
 
 
 if __name__ == "__main__":
