@@ -3,6 +3,7 @@
 # http://github.com/vfranca
 import click
 from pa_trading._pb import pullback
+from pa_trading.conf import formato_moeda
 
 
 # Cria o comando pb
@@ -17,9 +18,9 @@ def pb(preco_final, preco_inicial):
     recuo1 = pullback.retracao_um_terco(preco_final, terco)
     recuo2 = pullback.retracao_metade(preco_final, metade)
     recuo3 = pullback.retracao_dois_tercos(preco_final, terco)
-    click.echo("%.2f" % recuo1)
-    click.echo("%.2f" % recuo2)
-    click.echo("%.2f" % recuo3)
+    click.echo(formato_moeda % recuo1)
+    click.echo(formato_moeda % recuo2)
+    click.echo(formato_moeda % recuo3)
 
 
 if __name__ == "__main__":
